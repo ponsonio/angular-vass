@@ -1,21 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component( {
-    selector: 'tienda',
-    template: `
-        <h1>{{titulo}}</h1>
-        <ul>
-            <li>iPhone7</li>
-            <li>iPhone8</li>
-        <ul>
-    `,
-    styles: ['h1 {color:blue}']
+    selector: 'tienda-component',
+    templateUrl: './tienda.component.html',
+    styleUrls: ['./tienda.component.css']
 })
 
 export class TiendaComponent {
     public titulo;
 
-    constructor(){
+    constructor() {
         this.titulo = 'Bienvenidos a mi tienda';
     }
 
