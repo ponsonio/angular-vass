@@ -1,6 +1,39 @@
-
 <h1>{{titulo}}</h1>
-<ul>
+<ul *ngIf="mostrarEmpleado == true">
     <li>iPhone7</li>
     <li>iPhone8</li>
+    <li>{{empleado.nombre}}</li>
+    <li>{{trabajadores[0].nombre}}</li>
+
+</ul>
 <ul>
+    <li>{{trabajadores[0].nombre}}</li>
+</ul>
+<h3> Listado Empleados</h3>
+<ul >
+    <li *ngFor="let empleado of trabajadores; let i = index">
+            {{i}} -- {{empleado.nombre}}
+    </li>
+</ul>
+<h3>Selector Colores</h3>
+<input type="text" [(ngModel)]="color_seleccionado" />
+<pre [style.border]= "color_seleccionado == 'red' ? '5px solid black' : '2px solid blue'  ">
+    {{color_seleccionado}}
+</pre>
+<div [ngStyle]="{
+    'background': color_seleccionado,
+    'padding': '20px',
+    'boder':'20'
+}" >
+
+</div>
+
+<h3>ng Switch</h3>
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase="'red'" [ngStyle]="{'background':color, 
+        'padding': '20px' }">Red</li>
+    <li *ngSwitchCase="'green'">Green</li>
+<ul>
+
+<button (click)="log(color_seleccionado)" > Log</button>
+<button (click)="mostrarDatosEmpleado(true)" > Mostrar Empleado</button>
