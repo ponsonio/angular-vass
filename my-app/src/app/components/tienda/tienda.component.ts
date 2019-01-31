@@ -24,7 +24,7 @@ export class TiendaComponent {
 
     constructor() {
         this.color = 'red';
-        this.titulo = 'Bienvenidos a mi tienda';
+        this.titulo = 'Bienvenidos a mi tiendassss';
         this.color_seleccionado = '#ccc';
         console.log(this.productos);
     }

@@ -1,0 +1,47 @@
+
+<div>
+    <h1>My nombre es <b>{{nombre}}</b></h1>
+</div>
+
+<div *ngIf="flag == true">
+    <b>Hola!</b>
+</div>
+
+<div>
+    <button (click)="mostrar()" >Mostrar </button>
+</div>
+
+<b>Ng For</b>
+
+<div *ngIf="productos != null &&  productos.length > 0">
+    <ul>
+        <li *ngFor="let producto of productos ; let i = index "  >
+            {{i}} -  {{producto.nombre}}
+            <div *ngIf="producto.nombre == 'cuaderno' "> Oferta </div>
+        </li>
+    </ul>
+</div>
+
+<b>Ng Switch</b>
+<div>
+    <ul [ngSwitch]="color">
+        <li  *ngSwitchCase="'red'" [ngStyle]="{'background':'red'}" >Red</li>
+        <li  *ngSwitchCase="'green'" [ngStyle]="{'background':'green'}">Green</li>
+    </ul>
+</div>
+<b>Data Binding</b>
+<div>
+    <input type="text" [(ngModel)]="color_usuario" />
+    <div [ngStyle]="{'background': color_usuario}" > 
+        {{ color_usuario }} 
+    </div>
+</div>
+
+    <div>
+
+        Quantity: <input type="number" [(ngModel)]="quantity">
+        Costs:    <input type="number" [(ngModel)]="price">
+        
+        Total in dollar: {{ quantity * price }}
+        
+        </div>

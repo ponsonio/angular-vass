@@ -1,0 +1,11 @@
+
+<h2> {{titulo}}</h2>
+<h3>
+    <input type="text" [(ngModel)]="nueva_prenda" />
+    <button (click)="addPrenda()" >Añadir</button>
+    <ul>
+        <li *ngFor="let prenda of listado_ropa">
+            {{prenda}}
+        </li>
+    </ul>
+</h3>

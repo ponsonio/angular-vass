@@ -1,0 +1,9 @@
+
+<h2> {{titulo}}</h2>
+<div *ngIf="parametro">
+    <b>Contacto: {{parametro}}</b>
+</div>
+
+<div *ngIf="!parametro">
+    <button (click)="redirigir()" >Ver Contactos</button>
+</div>

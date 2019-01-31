@@ -2,4 +2,20 @@
     {{titulo}}
 </h1>
   
+<!--
 <tienda-component></tienda-component>
+
+<empleado-component></empleado-component>
+-->
+<nav>
+    <a [routerLink]="['/home']" >Home</a>
+    --
+    <a [routerLink]="['/empleado']" > Empleado</a>
+    --
+    <a [routerLink]="['/tienda']">Tienda</a>
+    --
+    <a [routerLink]="['/contacto']" > Contacto</a>
+
+</nav>
+
+<router-outlet></router-outlet>
