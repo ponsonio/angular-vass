@@ -10,7 +10,9 @@ import { TiendaComponent } from './components/tienda/tienda.component';
 import { EmpleadoComponent } from './components/empleado/empleado.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
+import { CochesComponent } from './components/coches/coches.component';
 
+import { ConversorPipe } from './pipes/conversor.pipe';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,14 @@ import { ContactoComponent } from './components/contacto/contacto.component';
     TiendaComponent,
     EmpleadoComponent,
     ContactoComponent,
-    HomeComponent
+    HomeComponent,
+    ConversorPipe,
+    CochesComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
- 
+    FormsModule,
+    routing
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

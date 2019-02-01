@@ -15,6 +15,7 @@
             {{i}} -- {{empleado.nombre}}
     </li>
 </ul>
+
 <h3>Selector Colores</h3>
 <input type="text" [(ngModel)]="color_seleccionado" />
 
@@ -39,3 +40,19 @@
 
 <button (click)="log(color_seleccionado)" > Log</button>
 <button (click)="mostrarDatosEmpleado(true)" > Mostrar Empleado</button>
+
+<p>
+    <b> Pipes</b>
+    <div>
+         <ul>
+                <li> {{ fecha|date:'fullDate' }}</li>
+                <li> {{ fecha|date:'dd/MM/yyyy' }}   </li> 
+                <li> {{ fecha|date:'fullDate' | uppercase}}</li>
+                <li> {{ fecha|date:'fullDate' | lowercase}}</li>
+                <li> {{ nombre| uppercase}}</li>
+                <li> {{ nombre| lowercase}}</li>
+                <li> {{ 5 | conversor: 7 }}</li>                
+         </ul>   
+
+    </div>
+

@@ -10,11 +10,15 @@ import { AppComponent } from './app.component';
 import { TiendaComponent } from './components/tienda/tienda.component';
 import { ContactoComponent } from './components/contactos/contacto.component';
 
+import { ConversorPipe } from './pipes/conversor.pipe';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     TiendaComponent,
-    ContactoComponent
+    ContactoComponent,
+    ConversorPipe
   ],
   imports: [
     BrowserModule,

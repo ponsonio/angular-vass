@@ -19,7 +19,8 @@ export class TiendaComponent {
     public color: string;
     public color_seleccionado: string;
 
-
+    public fecha: Date;
+    public nombre:String = "JorGe luis CABRERA";
 
 
     constructor() {
@@ -39,6 +40,7 @@ export class TiendaComponent {
             new Empleado('Carmen', 35),
         ];
         console.log(this.trabajadores);
+        this.fecha = new Date(2019, 4, 4);
     }
 
     mostrarDatosEmpleado(valor: boolean) {

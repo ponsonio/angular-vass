@@ -16,7 +16,7 @@
 <div *ngIf="productos != null &&  productos.length > 0">
     <ul>
         <li *ngFor="let producto of productos ; let i = index "  >
-            {{i}} -  {{producto.nombre}}
+            {{i}} -  {{producto.nombre | uppercase }}
             <div *ngIf="producto.nombre == 'cuaderno' "> Oferta </div>
         </li>
     </ul>
@@ -45,3 +45,22 @@
         Total in dollar: {{ quantity * price }}
         
         </div>
+    <p>
+        <div>
+            <b>Servicios</b>
+           {{mensaje}} 
+        </div>
+
+        <p>
+            <div>
+                <b>Pipes</b>
+                <ul>
+                    <li> fecha: {{ fecha }} </li>
+                    <li> fecha: {{ fecha | date:'dd/MM/yyy' }} </li>
+                    <li> fecha: {{ fecha | date:'fullDate' | uppercase }} </li>
+                    <li> fecha: {{ fecha | date:'fullDate' | lowercase }} </li>
+                    <li> {{ 5 | conversor: [10 , 10]}}</li>
+                </ul>
+            </div>
+
+

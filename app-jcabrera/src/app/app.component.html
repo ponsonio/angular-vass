@@ -3,6 +3,16 @@
   <h1>
     hola
   </h1>
+<div>
+  <nav>
+    <a [routerLink]="['/home']" [routerLinkActive]="['activado']" >Home</a>
+    ---
+    <a [routerLink]="['/home/1']">Home con Parametro</a>
+    ---
+    <a [routerLink]="['/tienda']">Ir a la tienda</a>
+    
+  </nav>
+
 </div>
 <div>
     <router-outlet></router-outlet>

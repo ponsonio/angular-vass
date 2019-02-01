@@ -8,13 +8,16 @@
 <empleado-component></empleado-component>
 -->
 <nav>
-    <a [routerLink]="['/home']" >Home</a>
+    <a [routerLink]="['/home']" [routerLinkActive]="['activado']" >Home</a>
     --
-    <a [routerLink]="['/empleado']" > Empleado</a>
+    <a [routerLink]="['/empleado']" [routerLinkActive]="['activado']"> Empleado</a>
     --
-    <a [routerLink]="['/tienda']">Tienda</a>
+    <a [routerLink]="['/tienda']" [routerLinkActive]="['activado']">Tienda</a>
     --
-    <a [routerLink]="['/contacto']" > Contacto</a>
+    <a [routerLink]="['/contacto']" [routerLinkActive]="['activado']"> Contacto</a>
+
+    --
+    <a [routerLink]="['/coches']" [routerLinkActive]="['activado']"> Coches</a>
 
 </nav>
 

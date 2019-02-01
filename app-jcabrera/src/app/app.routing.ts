@@ -7,6 +7,7 @@ import { ContactoComponent } from './components/contactos/contacto.component';
 const appRoutes: Routes = [
     {path: '', component: ContactoComponent },
     {path: 'home', component: ContactoComponent },
+    {path: 'home/:page', component: ContactoComponent },
     {path: 'tienda', component: TiendaComponent },
     {path: '**', component: ContactoComponent }
 ];
