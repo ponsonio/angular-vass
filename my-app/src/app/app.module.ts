@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
+import {HttpClient} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { routing, appRoutingProviders } from './app.routing';
 
@@ -27,6 +28,7 @@ import { ConversorPipe } from './pipes/conversor.pipe';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     routing
   ],
   providers: [appRoutingProviders],
