@@ -1,0 +1,55 @@
+<div>Componente de Autos</div>
+
+<form #formAuto="ngForm" (ngSubmit)="onSubmit()">
+
+    <p>
+        <label>Marca</label>
+        <input type="text" name="marca" #marca="ngModel"
+        [(ngModel)]="auto.marca" required pattern="[a-zA-z]+">
+        <span *ngIf="marca.touched && !marca.valid" >
+            La marca no puede contener numeros y no debe ser vacia
+        </span>
+    </p>
+
+    <p>
+            <label>Modelo</label>
+            <input type="text" name="modelo" #modelo="ngModel"
+            [(ngModel)]="auto.modelo" required pattern="[a-zA-z]+">
+            <span *ngIf="modelo.touched && !modelo.valid" >
+                   El modelo no puede contener numeros y no debe ser vacia
+                </span>
+        </p>
+
+        <p>
+                <label>Año</label>
+                <input type="text" name="anio" #anio="ngModel"
+                [(ngModel)]="auto.anio" required pattern="[0-9]+" >
+                <span *ngIf="anio.touched && !anio.valid" >
+                        El año no es correcto
+                     </span>
+            </p>
+
+            <p>
+                    <label>Color</label>
+                    <input type="text" name="color" #color="ngModel"
+                    [(ngModel)]="auto.color" required pattern="[a-zA-z]+">
+                    <span *ngIf="color.touched && !color.valid" >
+                            El color no es correcto
+                         </span>
+                </p>
+
+     <div>
+         <input type="submit" value="Guardar" [disabled]="!formAuto.form.valid" >
+     </div>           
+
+</form>
+
+<div>
+        <h3>Autos</h3>
+        <ul>
+
+            <li *ngFor="let a of autosList">
+                {{a.marca}} - {{a.modelo}} - {{a.anio}} - {{a.color}} 
+            </li>
+        </ul>
+    </div>

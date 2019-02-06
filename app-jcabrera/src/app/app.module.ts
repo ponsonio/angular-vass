@@ -4,11 +4,15 @@ import { FormsModule } from '@angular/forms';
 
 import { routing, appRoutingProviders } from './app.routing';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
 
 import { TiendaComponent } from './components/tienda/tienda.component';
 import { ContactoComponent } from './components/contactos/contacto.component';
+import { AutosComponent } from './components/autos/autos.component';
+
 
 import { ConversorPipe } from './pipes/conversor.pipe';
 
@@ -18,11 +22,13 @@ import { ConversorPipe } from './pipes/conversor.pipe';
     AppComponent,
     TiendaComponent,
     ContactoComponent,
+    AutosComponent,
     ConversorPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     routing
   ],
   providers: [appRoutingProviders],
