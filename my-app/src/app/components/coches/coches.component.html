@@ -38,11 +38,11 @@
 
 <div>
         <h4>Listado de Articulos</h4>
-        <ul *ngIf="articulos">
-            <li *ngFor="let articulo of articulos">
-                {{articulo.title}} - {{articulo.id}} 
-            </li> 
-        </ul> 
+            <ul *ngIf="articulos">
+                <li *ngFor="let user of articulos">
+                    {{user.ID}} - {{user.name}} - {{user.age}} - {{user.email}} - {{user.mobile}}
+                </li> 
+            </ul> 
         <span *ngIf="!articulos">Cargando</span>
     </div>
 

@@ -35,19 +35,19 @@ export class CochesComponent {
     ngOnInit() {
         console.log(this._peticionesService.getPrueba());
 
-    this._peticionesService.getArticulos().subscribe(
-        result => {
-            this.articulos = result;
-            if (!this.articulos) {
-                console.log('error en el servidor');
+        this._peticionesService.getArticulos().subscribe(
+            result => {
+                this.articulos = result;
+                if (!this.articulos) {
+                    console.log('error en el servidor');
+                }
+                console.log(result);
+            },
+            error => {
+                const errorMensaje = <any>error;
+                console.log(errorMensaje);
             }
-            console.log(result);
-        },
-        error => {
-            var errorMensaje = <any>error;
-            console.log(errorMensaje);
-        }
-    );
+        );
     }
  
 }

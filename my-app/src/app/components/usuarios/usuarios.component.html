@@ -1,0 +1,60 @@
+
+<div>
+        <label>Id:</label>
+        <input type="text" [(ngModel)]="id" >
+        <button (click)="eliminar()" > Eliminar</button>
+</div>
+
+<div>
+        <form #formUsuario="ngForm" (ngSubmit)="onSubmit()" >
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" name="name" #name="ngModel"
+                     [(ngModel)]="usuario.name" required >
+                     <span *ngIf="name.touched && !name.valid" >
+                         El nombre del usuario es incorrecto
+                     </span>
+                    </div>
+                <div class="form-group">
+                    <label>Age:</label>
+                    <input type="number" name="age" #age="ngModel"
+                     [(ngModel)]="usuario.age">
+                     <span *ngIf="age.touched && !age.valid" >
+                         La edad debe ser numèrica entera
+                     </span>
+                    </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" name="email" #email="ngModel"
+                     [(ngModel)]="usuario.email" required >
+                     <span *ngIf="email.touched && !email.valid" >
+                         El nombre del usuario es incorrecto
+                     </span>
+                    </div>
+            
+                <div class="form-group">
+                    <label>Mobile:</label>
+                    <input type="text" name="mobile" #mobile="ngModel"
+                     [(ngModel)]="usuario.mobile" required >
+                     <span *ngIf="mobile.touched && !mobile.valid" >
+                         El email es obligatorio
+                     </span>
+                    </div>
+            
+                <input type="submit" value="Crear" [disabled]="!formUsuario.form.valid" class="btn btn-default">
+            
+            </form>
+</div>
+
+
+
+
+<div style="text-align:center">
+    <h4>Listado de Usuarios</h4>
+        <ul *ngIf="usuarios">
+            <li *ngFor="let user of usuarios">
+                {{user.ID}} - {{user.name}} - {{user.age}} - {{user.email}} - {{user.mobile}}
+            </li> 
+        </ul> 
+    <span *ngIf="!usuarios">Cargando</span>
+</div>

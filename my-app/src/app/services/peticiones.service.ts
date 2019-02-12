@@ -6,7 +6,9 @@ import { Observable } from 'rxjs/observable';
 @Injectable()
 export class PeticionesService {
 
-    public url: string = 'https://jsonplaceholder.typicode.com/posts';
+    //public url: string = 'https://jsonplaceholder.typicode.com/posts';
+    public url: string = 'http://localhost:3000/api/users/';
+    
 
     constructor(
         private _httpClient: HttpClient) {
